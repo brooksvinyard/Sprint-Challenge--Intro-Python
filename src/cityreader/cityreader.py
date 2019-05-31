@@ -80,6 +80,11 @@ lon2 = float(input("Please input lon2: "))
 
 def cityreader_stretch(lat1, lon1, lat2, lon2, cities=[]):
     # within will hold the cities that fall within the specified region
+    lat1 = float(lat1) 
+    lat2 = float(lat2) 
+    lon1 = float(lon1) 
+    lon2 = float(lon2) 
+
     within = []
     if lon1 > lon2: #latlon1 pair is upper
         for c in cities:
@@ -99,3 +104,28 @@ print("**************stretchCities**************")
 
 for c in stretchCities:
     print(c)
+
+print("**************test1**************")
+
+test1 = cityreader_stretch(45, -100, 32, -120, cities)
+
+for c in test1:
+    print(c)
+
+print("**************test2**************")
+
+test2 = cityreader_stretch(32, -120, 45, -100, cities)
+
+for c in test2:
+    print(c)
+
+print("**************test3**************")
+
+test3 = cityreader_stretch(40, -50, 12, -120, cities)
+
+for c in test3:
+    print(c)
+
+
+
+
